@@ -1,0 +1,9 @@
+@use "global" as *;
+
+.seminar{
+    text-align: center;
+}
+
+.seminar__title{
+    color: $blue;
+}
