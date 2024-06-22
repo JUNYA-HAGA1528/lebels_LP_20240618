@@ -5,6 +5,10 @@
     justify-content: space-around;
 }
 
+.comment__wrapper + .comment__wrapper{
+    margin-top: rem(40);
+}
+
 .comment__img{
     width: 28.0%;
 }
@@ -53,33 +57,32 @@
 .comment__content label {
     position: absolute;
     z-index: 1;
-    bottom: 0;
+    bottom: rem(20);
     width: 100%;
-    height: 140px; /* グラデーションの高さ */
+    height: rem(100); /* グラデーションの高さ */
     cursor: pointer;
     text-align: center;
     /* 以下グラデーションは背景を自身のサイトに合わせて設定してください */
-    background: linear-gradient(to bottom, rgba(250, 252, 252, 0) 0%, rgba(250, 252, 252, 0.95) 90%);
+    background: rgba(255, 255, 255, 0.8);
 }
 
 .comment__content input:checked + label {
     background: inherit; /* 開いた時にグラデーションを消す */
 }
 
-.comment__content label:after {
-    line-height: 2.5rem;
+.comment__content label::after {
+    line-height: 2rem;
     position: absolute;
     z-index: 2;
     bottom: 20px;
     left: 50%;
-    width: 16rem;
-    font-family: FontAwesome;
-    content: '\f13a'' 続きをよむ';
     transform: translate(-50%, 0);
-    letter-spacing: 0.05em;
-    color: #ffffff;
-    border-radius: 20px;
-    background-color: rgba(27, 37, 56, 1);
+    width: rem(124);  /* 幅を指定 */
+    height: rem(33.4);  /* 高さを指定 */
+    background-image: url('../images/common/bottun.png');
+    background-size: cover;  /* 画像が要素全体に適用されるように */
+    background-repeat: no-repeat;  /* 画像の繰り返しを防止 */
+    content: '';  /* 疑似要素を表示するために必要 */
 }
 
 .comment__content input {
@@ -88,7 +91,7 @@
 
 .comment__content .comment__text {
     overflow: hidden;
-    height: 100px; /* 開く前に見えている部分の高さ */
+    height: rem(77); /* 開く前に見えている部分の高さ */
     transition: height 0.4s ease-in-out; /* トランジション時間を2秒に設定し、イージングを追加 */
 }
 

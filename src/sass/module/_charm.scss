@@ -2,9 +2,42 @@
 
 .charm{
     background-color: rgba(0, 160, 233, 0.08);
-    padding-bottom: rem(100);
+    padding-bottom: rem(44);
 }
 
 .charm__container{
     margin-top: rem(-64);
+}
+
+.charm__life {
+    margin-top: 40px; /* rem(40) の代わりに 40px を使用 */
+    text-align: center; /* テキストを中央寄せ */
+}
+
+.charm__life img {
+    width: rem(777);
+    height: rem(490);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.charm__recommendation-text {
+    background: linear-gradient(transparent 60%, #FCEE21 50%);
+    width: rem(360);
+    font-size: rem(30);
+    margin: rem(31.2) auto auto auto;
+    text-align: center;
+}
+
+.charm__recommendation-img {
+    margin-top: rem(38);
+}
+
+.charm__recommendation-img img {
+    width: rem(770);
+    height: rem(230);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }

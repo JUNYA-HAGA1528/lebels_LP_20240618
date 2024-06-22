@@ -37,31 +37,36 @@
     <script defer src="./assets/js/script.js"></script>
 </head>
 
-<!--「続きをよむ」のタブの設置-->
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        var checkbox = document.getElementById('cp01');
-        var label = document.querySelector('label[for="cp01"]');
-        var container = document.querySelector('.comment__text');
+    <!--「続きをよむ」のタブの設置-->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var checkboxes = document.querySelectorAll('.comment__content input[type="checkbox"]');
+            checkboxes.forEach(function(checkbox) {
+                var label = document.querySelector('label[for="' + checkbox.id + '"]');
+                var container = checkbox.parentElement.querySelector('.comment__text');
 
-        label.addEventListener('click', function() {
-            if (checkbox.checked) {
-                checkbox.checked = false;
-                label.style.display = 'block';
-                container.style.height = '100px';
-            } else {
-                checkbox.checked = true;
-                label.style.display = 'none';
-                container.style.height = container.scrollHeight + 'px';
-            }
+                label.addEventListener('click', function() {
+                    if (checkbox.checked) {
+                        checkbox.checked = false;
+                        label.style.display = 'block';
+                        container.style.height = '100px';
+                    } else {
+                        checkbox.checked = true;
+                        label.style.display = 'none';
+                        container.style.height = container.scrollHeight + 'px';
+                    }
+                });
+            });
         });
-    });
-</script>        
+    </script>      
 
 
 
 
 <body>
+    <!-----------------------
+      header
+    ------------------------>
     <header class="header">
         <div class="header__inner">
             <picture>
@@ -73,6 +78,9 @@
 
 
 
+    <!-----------------------
+      ICT企業の魅力について
+    ------------------------>
     <section class="charm">
         <picture>
             <source srcset="./assets/images/common/charm-pc.png" media="(min-width: 428px)">
@@ -80,13 +88,11 @@
         </picture>
 
         <div class="charm__inner inner">
-
-            <div class="charm__container comment">
-                <div class="comment__wrapper">
+            <ul class="charm__container comment">
+                <li class="comment__wrapper">
                     <div class="comment__img">
                         <img src="./assets/images/common/charm-man-pc.png" alt="">
                     </div>
-
                     <div class="comment__content">
                         <input id="cp01" type="checkbox">
                         <label for="cp01"></label>
@@ -100,10 +106,57 @@
                             </p>
                         </div>
                     </div>
+                </li>
+        
+                <li class="comment__wrapper">
+                    <div class="comment__content">
+                        <input id="cp02" type="checkbox">
+                        <label for="cp02"></label>
+                        <div class="comment__textbox">
+                            <h3 class="comment__title">暮らしを支える</h3>
+                            <p class="comment__text">
+                                ICTは皆さんの暮らしの身近なところで活用されています。<br>
+                                スマートフォン、SNS、銀行のATM、ネットショッピング、学校で使うパソコンやタブレット、そして就職のナビサイトも。あまり意識していなくても、私たちは毎日ICTのおかげで、便利に快適な生活ができているのです。<br>
+                                また、距離に関係なく人と人がつながりコミュニケーションを取ることができるのもICT のおかげ。ICT業界で働くこと、それは、人々の豊かな暮らしを支えることなのです。
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="comment__img">
+                        <img src="./assets/images/common/charm-woman-pc.png" alt="">
+                    </div>
+                </li>
+            </ul>
+
+            <div class="charm__life">
+                <img src="./assets/images/common/charm-life-pc.png" alt="">
+            </div>
+
+            <div class="charm__recommendation">
+                <p class="charm__recommendation-text">こんな人にオススメ！</p>
+                <div class="charm__recommendation-img">
+                    <img src="./assets/images/common/charm-recommendation-pc.png" alt="">
                 </div>
             </div>
+
         </div>
     </section>
+
+
+
+    <!-----------------------
+      ICT企業の魅力について
+    ------------------------>
+    <section class="charm">
+        <picture>
+            <source srcset="./assets/images/common/seminar-pc.png" media="(min-width: 428px)">
+            <img src="./assets/images/common/seminar-pc.png" alt="ウミガメ単体">
+        </picture>
+
+        <div class="charm__inner inner">
+        </div>
+    </section>
+
 
 
 
@@ -112,7 +165,9 @@
 
 
 
-
+    <!-----------------------
+      ページ内　トップ
+    ------------------------>
     <div class="top__scroll-line">
         <picture>
             <source srcset="./assets/images/common/top-scroll-pc.png" media="(min-width: 428px)">
@@ -122,7 +177,9 @@
 
 
 
-
+    <!-----------------------
+      footer
+    ------------------------>
     <footer class="footer">
         <div class="footer__inner">
 
