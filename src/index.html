@@ -42,7 +42,7 @@
     document.addEventListener('DOMContentLoaded', function() {
         var checkbox = document.getElementById('cp01');
         var label = document.querySelector('label[for="cp01"]');
-        var container = document.querySelector('.charm__text');
+        var container = document.querySelector('.comment__text');
 
         label.addEventListener('click', function() {
             if (checkbox.checked) {
@@ -65,7 +65,7 @@
     <header class="header">
         <div class="header__inner">
             <picture>
-                <source srcset="./assets/images/common/header-pc.jpg" media="(min-width: 768px)">
+                <source srcset="./assets/images/common/header-pc.jpg" media="(min-width: 428px)">
                 <img src="./assets/images/common/header-sp.jpg" alt="ウミガメ単体">
             </picture>
         </div>
@@ -74,21 +74,34 @@
 
 
     <section class="charm">
+        <picture>
+            <source srcset="./assets/images/common/charm-pc.png" media="(min-width: 428px)">
+            <img src="./assets/images/common/charm-pc.png" alt="ウミガメ単体">
+        </picture>
+
         <div class="charm__inner inner">
-            <picture>
-                <source srcset="./assets/images/common/charm-pc.png" media="(min-width: 768px)">
-                <img src="./assets/images/common/charm-pc.png" alt="ウミガメ単体">
-            </picture>
 
+            <div class="charm__container comment">
+                <div class="comment__wrapper">
+                    <div class="comment__img">
+                        <img src="./assets/images/common/charm-man-pc.png" alt="">
+                    </div>
 
-            <div class="charm__textbox">
-                <input id="cp01" type="checkbox">
-                <label for="cp01"></label>
-                <div class="charm__text">
-                    <p>※本企画は秋田県による「若者デジタル人材Aターン事業」の一環で秋田県のICT企業の魅力発信やインターンシップ告知を目的としています。※本企画は秋田県による「若者デジタル人材Aターン事業」の一環で秋田県のICT企業の魅力発信やインターンシップ告知を目的としています。※本企画は秋田県による「若者デジタル人材Aターン事業」の一環で秋田県のICT企業の魅力発信やインターンシップ告知を目的としています。※本企画は秋田県による「若者デジタル人材Aターン事業」の一環で秋田県のICT企業の魅力発信やインターンシップ告知を目的としています。※本企画は秋田県による「若者デジタル人材Aターン事業」の一環で秋田県のICT企業の魅力発信やインターンシップ告知を目的としています。※本企画は秋田県による「若者デジタル人材Aターン事業」の一環で秋田県のICT企業の魅力発信やインターンシップ告知を目的としています。※本企画は秋田県による「若者デジタル人材Aターン事業」の一環で秋田県のICT企業の魅力発信やインターンシップ告知を目的としています。</p>
+                    <div class="comment__content">
+                        <input id="cp01" type="checkbox">
+                        <label for="cp01"></label>
+                        <div class="comment__textbox">
+                            <h3 class="comment__title">未来を創る</h3>
+                            <p class="comment__text">
+                                ICTとは「Information and Communication Technology(情報通信技術)」のこと。<br>
+                                ICTはさまざまな産業界の企業活動を支えるだけでなく、あらゆるモノやサービスに活用されています。道路や鉄道などの「社会インフラ」、病院、介護施設などの「社会福祉」、「農業」、そして「防災」にも。社会に広く浸透し、今では人々の生活に必要不可欠なものになっています。<br>
+                                さらに、Al、IoT、ロボットなどの新しい技術の社会実装が進められています。<br>
+                                今後、ＩＣＴがますます便利で豊かな社会を実現していくでしょう。ICT業界で働くこと、それは、明るい未来を創ることなのです。
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
-
         </div>
     </section>
 
@@ -102,7 +115,7 @@
 
     <div class="top__scroll-line">
         <picture>
-            <source srcset="./assets/images/common/top-scroll-pc.png" media="(min-width: 768px)">
+            <source srcset="./assets/images/common/top-scroll-pc.png" media="(min-width: 428px)">
             <img src="./assets/images/common/top-scroll-sp.jpg" alt="ウミガメ単体">
         </picture>
     </div>
