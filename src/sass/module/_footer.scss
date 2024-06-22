@@ -1,0 +1,35 @@
+@use "global" as *;
+
+.footer{
+    background-color:#333333 ;
+    color: $white;
+    text-align: center;
+    padding: rem(50) 0 rem(34);
+}
+
+.footer__text-text{
+    display: inline-block;
+    padding-bottom: rem(27);
+    font-size: rem(15);
+    border-bottom: solid rem(1) $white ;
+}
+
+.footer__text-contact{
+    margin-top: rem(41.6);
+    font-size: rem(36);
+}
+
+.footer__text-company{
+    margin-top: rem(43.2);
+    letter-spacing: 0.05em;
+}
+
+.footer__text-address{
+    margin-top: rem(30);
+    letter-spacing: 0.05em;
+}
+
+.footer__copyright{
+    margin-top: rem(58.6);
+    letter-spacing: 0.05em;
+}
