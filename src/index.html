@@ -39,25 +39,25 @@
 
     <!--「続きをよむ」のタブの設置-->
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            var checkboxes = document.querySelectorAll('.comment__content input[type="checkbox"]');
-            checkboxes.forEach(function(checkbox) {
-                var label = document.querySelector('label[for="' + checkbox.id + '"]');
-                var container = checkbox.parentElement.querySelector('.comment__text');
+    document.addEventListener('DOMContentLoaded', function() {
+        var checkboxes = document.querySelectorAll('.comment__content input[type="checkbox"]');
+        checkboxes.forEach(function(checkbox) {
+            var label = document.querySelector('label[for="' + checkbox.id + '"]');
+            var container = checkbox.parentElement.querySelector('.comment__text');
 
-                label.addEventListener('click', function() {
-                    if (checkbox.checked) {
-                        checkbox.checked = false;
-                        label.style.display = 'block';
-                        container.style.height = '100px';
-                    } else {
-                        checkbox.checked = true;
-                        label.style.display = 'none';
-                        container.style.height = container.scrollHeight + 'px';
-                    }
-                });
+            label.addEventListener('click', function() {
+                if (checkbox.checked) {
+                    checkbox.checked = false;
+                    label.style.display = 'block';
+                    container.style.height = '100px';
+                } else {
+                    checkbox.checked = true;
+                    label.style.display = 'none';
+                    container.style.height = container.scrollHeight + 'px';
+                }
             });
         });
+    });
     </script>      
 
 
@@ -101,13 +101,12 @@
                             <p class="comment__text">
                                 ICTとは「Information and Communication Technology(情報通信技術)」のこと。<br>
                                 ICTはさまざまな産業界の企業活動を支えるだけでなく、あらゆるモノやサービスに活用されています。道路や鉄道などの「社会インフラ」、病院、介護施設などの「社会福祉」、「農業」、そして「防災」にも。社会に広く浸透し、今では人々の生活に必要不可欠なものになっています。<br>
-                                さらに、Al、IoT、ロボットなどの新しい技術の社会実装が進められています。<br>
-                                今後、ＩＣＴがますます便利で豊かな社会を実現していくでしょう。ICT業界で働くこと、それは、明るい未来を創ることなのです。
+                                さらに、AI、IoT、ロボットなどの新しい技術の社会実装が進められています。<br>
+                                今後、ICTがますます便利で豊かな社会を実現していくでしょう。ICT業界で働くこと、それは、明るい未来を創ることなのです。
                             </p>
                         </div>
                     </div>
-                </li>
-        
+                </li>        
                 <li class="comment__wrapper">
                     <div class="comment__content">
                         <input id="cp02" type="checkbox">
@@ -121,11 +120,10 @@
                             </p>
                         </div>
                     </div>
-
                     <div class="comment__img">
                         <img src="./assets/images/common/charm-woman-pc.png" alt="">
                     </div>
-                </li>
+                </li>            
             </ul>
 
             <div class="charm__life">
@@ -145,7 +143,7 @@
 
 
     <!-----------------------
-      ICT企業の魅力について
+      ICT業界インターンシップセミナー
     ------------------------>
     <section class="seminar">
         <picture>
@@ -161,12 +159,99 @@
                 「新しいことを学び続けたい！」「最先端に触れていたい！」方や、ICT業界って何？どんな風に働いているの？という方まで！<br>この夏に第一歩を踏み出す方に向けたインターンシップセミナーを開催いたします。
             </p>
             <div class="seminar__img">
-                <img src="./assets/images/common/" alt="">
+                <img src="./assets/images/common/seminar-pdf-pc.png" alt="">
             </div>
+            <p class="seminar__pdf">＜クリックでPDFが開きます＞</p>
 
+            <div class="seminar__detail">
+                <dl class="seminar__content">
+                    <div class="seminar__dt">
+                        <dt>開催日</dt>
+                    </div>
+                    <div class="seminar__dd">
+                        <dd>2024年7月27日（土）&emsp;【時間】13：00～15：30</dd>
+                    </div>
+                </dl>
+                <dl class="seminar__content">
+                    <div class="seminar__dt">
+                        <dt>会場</dt>
+                    </div>
+                    <div class="seminar__dd">
+                        <dd>TKPガーデンシティ渋谷&emsp;11階</dd>
+                    </div>
+                </dl>
+    
+                <dl class="seminar__content">
+                    <div class="seminar__dt">
+                        <dt>内容</dt>
+                    </div>
+                    <div class="seminar__dd">
+                        <dd>
+                            自分の未来を見つめ、「働く」を考えていく講座。当日は、ICT業界の将来性についてのお話だけでなく、秋田県内の複数のICT企業もお招きし、個別ブースにて実際のお仕事や魅力などリアルな情報もお伝えします。<br>【費用】参加無料&emsp;【服装】自由&emsp;【対象者】全卒年対象
+                        </dd>
+                    </div>
+                </dl>
+    
+                <dl class="seminar__content">
+                    <div class="seminar__dt">
+                        <dt>申し込み</dt>
+                    </div>
+                    <div class="seminar__dd">
+                        <dd><span>下記のフォーム</span>よりお申し込みください。</dd>
+                    </div>
+                </dl>
 
+                <div class="seminar__button">
+                    <button class="button"><a href="#">お申込みフォーム</a></button>
+                </div>
+                
+            </div>
         </div>
     </section>
+
+
+
+    <!-----------------------
+      ICT企業の魅力について
+    ------------------------>
+    <div class="top-local local">
+        <picture>
+            <source srcset="./assets/images/common/local-pc.png" media="(min-width: 428px)">
+            <img src="./assets/images/common/charm-pc.png" alt="ウミガメ単体">
+        </picture>
+
+        <div class="local__inner inner">
+            <ul class="local__container comment">
+                <li class="comment__wrapper">
+                    <div class="comment__img">
+                        <img src="./assets/images/common/local-man-pc.png" alt="">
+                    </div>
+                    <div class="comment__content">
+                        <input id="cp03" type="checkbox">
+                        <label for="cp03"></label>
+                        <div class="comment__textbox">
+                            <h3 class="comment__title">未来を創る</h3>
+                            <p class="comment__text">
+                                ICTとは「Information and Communication Technology(情報通信技術)」のこと。<br>
+                                ICTはさまざまな産業界の企業活動を支えるだけでなく、あらゆるモノやサービスに活用されています。道路や鉄道などの「社会インフラ」、病院、介護施設などの「社会福祉」、「農業」、そして「防災」にも。社会に広く浸透し、今では人々の生活に必要不可欠なものになっています。<br>
+                                さらに、AI、IoT、ロボットなどの新しい技術の社会実装が進められています。<br>
+                                今後、ICTがますます便利で豊かな社会を実現していくでしょう。ICT業界で働くこと、それは、明るい未来を創ることなのです。
+                            </p>
+                        </div>
+                    </div>
+                </li>        
+            </ul>
+
+            <div class="local__recommendation">
+                <p class="local__recommendation-text">こんな人にオススメ！</p>
+                <div class="local__recommendation-img">
+                    <img src="./assets/images/common/local-recommendation-pc.png" alt="">
+                </div>
+            </div>
+
+        </div>
+    </div>
+
 
 
 

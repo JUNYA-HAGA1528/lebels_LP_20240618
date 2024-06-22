@@ -6,4 +6,67 @@
 
 .seminar__title{
     color: $blue;
+    font-size: rem(36);
+}
+
+.seminar__img img{
+ aspect-ratio: 380/537;
+ width: rem(380);
+ height: 100%;
+ object-fit: cover;
+ margin: auto;
+}
+
+.seminar__pdf{
+    margin-top: rem(11.3);
+}
+
+.seminar__detail{
+    max-width: rem(710);
+    margin:rem(45.5) auto auto auto;
+    text-align: left;
+}
+
+.seminar__content{
+    font-size: rem(14);
+    line-height: calc(24/14);
+    @include mq(md){
+        font-size: rem(16);
+        line-height: calc(24/16);
+    }
+}
+
+.seminar__content + .seminar__content{
+    margin-top: rem(28.4);
+}
+
+.seminar__dt{
+    display: inline-block;
+    position: relative;
+    color: $blue;
+}
+
+.seminar__dt::before {
+    content: "";/*線が表示される*/
+    width: rem(12);/*線の長さを指定*/
+    height: rem(3);/*線の太さを指定*/
+    /*「position」「top」「left」で、タイトルを基準に横線の位置を設定します。*/
+    position: absolute;
+    top: 50%;
+    background-color: #EF7740;
+    left: rem(-20);/*0指定すると、文字の上に線が来る*/
+}
+
+.seminar__dd{
+    margin-top: rem(16);
+    letter-spacing: 0.05em;
+}
+
+.seminar__dd span{
+    color: #EF2622;
+}
+
+.seminar__button {
+    margin-top: rem(54);
+    text-align: center;
 }
