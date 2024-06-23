@@ -1,8 +1,11 @@
 @use "global" as *;
 
 .comment__wrapper{
-    display: flex;
-    justify-content: space-around;
+    @include mq(md){
+        display: flex;
+        justify-content: space-around;
+    
+    }
 }
 
 .comment__wrapper + .comment__wrapper{
@@ -10,7 +13,10 @@
 }
 
 .comment__img{
-    width: 28.0%;
+    width: 100%;
+    @include mq(md){
+        width: 28.0%;
+    }
 }
 
 .comment__img img{ 
@@ -19,12 +25,15 @@
 }
 
 .comment__content{
-    width: 65.0%;
+    width: 100%;
+    @include mq(md){
+        width: 65.0%;
+    }
 }
 
 .comment__textbox{
     background-color: $white;
-    padding: rem(30) rem(21) rem(30) rem(30);
+    padding: rem(30) rem(21) rem(70) rem(30);
 }
 
 .comment__title{
@@ -75,7 +84,7 @@
     line-height: 2rem;
     position: absolute;
     z-index: 2;
-    bottom: 20px;
+    bottom: 20%;
     left: 50%;
     transform: translate(-50%, 0);
     width: 124px;  /* remからpxに変更 */
@@ -85,6 +94,17 @@
     background-repeat: no-repeat;  /* 画像の繰り返しを防止 */
     content: '';  /* 疑似要素を表示するために必要 */
 }
+@media screen and (max-width:840px) {
+    .comment__content label::after {
+        bottom: 8%;
+    }
+}
+@media screen and (max-width:800px) {
+    .comment__content label::after {
+        bottom: 0%;
+    }
+}
+
 
 .comment__content input {
     display: none;

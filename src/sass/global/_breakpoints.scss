@@ -13,7 +13,7 @@ $mediaquerys: (
   //スマホファースト
   $breakpoints: (
     sm: 600,
-    md: 428,
+    md: 768,
     lg: 1024,
     xl: 1440,
   );
@@ -29,7 +29,7 @@ $mediaquerys: (
 } @else {
   $breakpoints: (
     xl: 1440,
-    lg: 1023,
+    lg: 767,
     md: 427,
     sm: 600,
   );
