@@ -39,25 +39,28 @@
 
     <!--「続きをよむ」のタブの設置-->
     <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        var checkboxes = document.querySelectorAll('.comment__content input[type="checkbox"]');
-        checkboxes.forEach(function(checkbox) {
-            var label = document.querySelector('label[for="' + checkbox.id + '"]');
-            var container = checkbox.parentElement.querySelector('.comment__text');
+        document.addEventListener('DOMContentLoaded', function() {
+            var checkboxes = document.querySelectorAll('.comment__content input[type="checkbox"]');
+            checkboxes.forEach(function(checkbox) {
+                var label = document.querySelector('label[for="' + checkbox.id + '"]');
+                var container = checkbox.parentElement.querySelector('.comment__text');
+                var textbox = container.parentElement;
 
-            label.addEventListener('click', function() {
-                if (checkbox.checked) {
-                    checkbox.checked = false;
-                    label.style.display = 'block';
-                    container.style.height = '100px';
-                } else {
-                    checkbox.checked = true;
-                    label.style.display = 'none';
-                    container.style.height = container.scrollHeight + 'px';
-                }
+                label.addEventListener('click', function() {
+                    if (checkbox.checked) {
+                        checkbox.checked = false;
+                        label.style.display = 'block';
+                        container.style.height = '100px';
+                        textbox.classList.remove('opened'); // 開いたときのクラスを削除
+                    } else {
+                        checkbox.checked = true;
+                        label.style.display = 'none';
+                        container.style.height = container.scrollHeight + 'px';
+                        textbox.classList.add('opened'); // 開いたときのクラスを追加
+                    }
+                });
             });
-        });
-    });
+        });    
     </script>      
 
 
@@ -138,8 +141,12 @@
                             </p>
                         </div>
                     </div>
-                </li>        
-                <li class="comment__wrapper">
+                </li>
+                <li class="comment__wrapper reverse">
+                                        <div class="comment__img">
+                        <img src="./assets/images/common/charm-man-pc.png" alt="">
+                    </div>
+
                     <div class="comment__content">
                         <input id="cp02" type="checkbox">
                         <label for="cp02"></label>
@@ -152,12 +159,10 @@
                             </p>
                         </div>
                     </div>
-                    <div class="comment__img">
-                        <img src="./assets/images/common/charm-man-pc.png" alt="">
-                    </div>
-                </li>            
+                </li>
             </ul>
-
+            
+            
             <div class="charm__life">
                 <img src="./assets/images/common/charm-life-pc.png" alt="">
             </div>

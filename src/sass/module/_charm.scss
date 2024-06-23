@@ -10,7 +10,10 @@
 }
 
 .charm__container{
-    margin-top: rem(-64);
+    margin-top: rem(0);
+    @include mq(md){
+        margin-top: rem(-64);
+    }
 }
 
 .charm__life {

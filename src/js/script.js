@@ -1,8 +1,6 @@
 
 jQuery(function ($) { // この中であればWordpressでも「$」が使用可能になる
 
-
-
     //帯でのトップスクロールする
     document.addEventListener('DOMContentLoaded', function() {
         var scrollToTopBtn = document.getElementById('scroll-to-top');
@@ -15,5 +13,4 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
             });
         });
     });
-
 });

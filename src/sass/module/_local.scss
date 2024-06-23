@@ -11,7 +11,26 @@
 }
 
 .local__container{
-    margin-top: rem(-32);
+    margin-top: rem(-90);
+    @include mq(md){
+        margin-top: rem(0);
+    }
+}
+
+@media screen and (max-width:600px) {
+    .local__container {
+        margin-top: rem(-60);
+    }
+}
+@media screen and (max-width:500px) {
+    .local__container {
+        margin-top: rem(-45);
+    }
+}
+@media screen and (max-width:400px) {
+    .local__container {
+        margin-top: rem(-30);
+    }
 }
 
 .local__life {
