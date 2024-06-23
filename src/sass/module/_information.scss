@@ -1,60 +1,106 @@
 @use "global" as *;
 
-
-.information__card {
-    color: #ffffff; /* $white の値を使用 */
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.information__image {
-    filter: brightness(0.7);
-    width: 100%;
-    position: relative;
-}
-
-.information__image img {
-    aspect-ratio: 780 / 390;
-    width: rem(780);
-    height: 100%; /* 縦横比を保つためにheightをautoに設定 */
-    object-fit: cover;
+.information__inner{
+    max-width: rem(790);
     margin: auto;
 }
 
-.information__content {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+/* Header */
+.information__bg {
+    background-image: url(../images/common/information-pc.png); /* 画像のパスを適宜変更してください */
+    background-size: cover;
+    background-position: center;
+    object-fit: cover;
+    position: relative;
     width: 100%;
-    height: 100%;
+    height: rem(390); /* 高さ指定 */
+    margin: 0 auto; /* 中央揃え */
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
+    color: white;
+}
+
+.information__bg::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* 黒のオーバーレイ */
+}
+
+.information__content {
+    position: relative;
+    z-index: 1;
+    max-width: rem(600);
 }
 
 .information__title {
-    font-size: 36px; /* remをpxに変更。必要に応じてremに戻してください */
-    line-height: calc(50 / 36);
-    font-weight: $black;
+    font-size: rem(36);
+    letter-spacing: -0.05em;
 }
 
-.information__text {
-    margin-top: 30px; /* remをpxに変更。必要に応じてremに戻してください */
-    font-size: 16px; /* remをpxに変更。必要に応じてremに戻してください */
+.information__subtitle {
+    text-align: left;
+    margin-top: rem(26.5);
+    font-size: rem(16);
     line-height: 1.75;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.1em;
 }
 
-.information__button-text {
-    font-size: 16px; /* remをpxに変更。必要に応じてremに戻してください */
-    line-height: 2;
+.information__action {
+    margin-top: rem(26);
+    font-size: rem(16);
+}
+
+
+
+
+.information__button {
+    margin-top: rem(10.6);
     display: inline-block;
-    text-align: center;
-    margin-top: 50px; /* remをpxに変更。必要に応じてremに戻してください */
-    padding: 11.5px 0; /* remをpxに変更。必要に応じてremに戻してください */
-    width: 200px; /* remをpxに変更。必要に応じてremに戻してください */
-    border: 1px solid #707070; /* remをpxに変更。必要に応じてremに戻してください */
+    color: $white;
+    font-size: rem(16);
+    background: #EF2622;
+    width: rem(360);
+    padding: rem(18) 0;
+    position: relative;
+    z-index: 1;
+    border: none;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+
+}
+
+.information__button::before {
+    content: "";
+    width: rem(360);
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background: $white;
+    transform: scaleX(0);
+    transition: transform ease .3s;
+    border: solid 1px #333 ;
+}
+
+.information__button:hover {
+    color: #333;
+}
+
+.information__button:hover::before {
+    transform: scaleX(1);
+}
+
+.information__button a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    width: 100%;
+    height: 100%;
 }
