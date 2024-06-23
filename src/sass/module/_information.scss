@@ -104,3 +104,24 @@
     width: 100%;
     height: 100%;
 }
+
+.information__button span::after {
+	background-image: url(../images/common/arrow-right.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	content: "";
+    position: absolute;
+    top: 50%;
+    right: rem(50);
+    width: rem(19);
+	height: rem(14);
+	transform: translateY(-50%);
+	transition: 0.2s background-color;
+}
+
+.information__button:hover span::after {
+    @include mq(md){
+        background-image: url(../images/common/arrow-right-black.png);
+    }
+}

@@ -1,0 +1,10 @@
+@use "global" as *;
+
+.scroll-line {
+    transition-property: opacity;
+    transition-duration: 0.5s;
+  }
+
+.scroll-line:hover {
+    opacity: 0.3; 
+}
