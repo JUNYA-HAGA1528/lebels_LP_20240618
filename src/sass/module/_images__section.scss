@@ -5,7 +5,9 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: rem(3.2);
+    gap: 0 rem(3.2);
+    position: relative; /* 追加 */
+    z-index: 0; /* 追加 */
     @include mq(md){
         gap: rem(9.3);
     }

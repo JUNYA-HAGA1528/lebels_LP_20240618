@@ -1,25 +1,9 @@
 @use "global" as *;
 
 .future{
-	position: relative;
+    position: relative; /* 追加 */
+    z-index: 1; /* 追加 */
 }
-
-.future::before {
-    @include mq(md){
-        background-image: url(../images/common/map-pc-.png);
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: contain;
-        position: absolute;
-        content: "";
-        bottom: rem(-56);
-        right: calc(50% - min(50%, rem(600)));
-        width: rem(203);
-        height: rem(338);
-        z-index: 100;
-    }
-}
-
 
 .future__inner{
     max-width: rem(1273);
@@ -41,7 +25,12 @@
 
 .future__button {
     text-align: center;
-    margin-top: rem(39);
+    margin-top: rem(-150);
+}
+@media screen and (max-width: 1150px) {
+    .future__button {
+        margin-top: rem(-100);
+    }
 }
 
 .future__info {
@@ -49,12 +38,16 @@
     font-size: rem(28);
     font-weight: bold;
     background: #EF2622;
-    width: rem(600);
-    padding: rem(30.6) 0;
+    width: rem(310);
+    padding: rem(18) 0;
     border-radius: rem(50);
     position: relative;
     z-index: 1;
     transition: .3s;
+    @include mq(md){
+        width: rem(600);
+        padding: rem(30.6) 0;
+    }
 }
 
 .future__info::before {
