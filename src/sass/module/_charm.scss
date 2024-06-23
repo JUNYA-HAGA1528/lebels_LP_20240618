@@ -5,6 +5,10 @@
     padding-bottom: rem(44);
 }
 
+.charm__inner{
+    max-width: $max-width
+}
+
 .charm__container{
     margin-top: rem(-64);
 }
@@ -15,33 +19,47 @@
 }
 
 .charm__life img {
-    width: rem(777);
-    height: rem(490);
+    width: 100%;
+    height: 100%;
     display: block;
     margin-left: auto;
     margin-right: auto;
+    @include mq(md){
+        width: rem(777);
+        height: rem(490);
+    }
 }
 
 .charm__recommendation-text {
     background: linear-gradient(transparent 60%, #FCEE21 50%);
     color: #131B63;
-    width: rem(300);
-    font-size: rem(30);
+    width: rem(185);
+    font-size: rem(18);
     margin: rem(31.2) auto auto auto;
     text-align: center;
+    font-weight: $bold;
     @include mq(md){
+        font-size: rem(30);
         width: rem(360);
+        font-weight: $normal;
     }
 }
 
 .charm__recommendation-img {
-    margin-top: rem(38);
+    margin-top: rem(22);
+    @include mq(md){
+        margin-top: rem(38);
+    }
 }
 
 .charm__recommendation-img img {
-    width: rem(770);
-    height: rem(230);
+    width: 100%;
+    height: 100%;
     display: block;
     margin-left: auto;
     margin-right: auto;
+    @include mq(md){
+        width: rem(770);
+        height: rem(230);
+    }
 }

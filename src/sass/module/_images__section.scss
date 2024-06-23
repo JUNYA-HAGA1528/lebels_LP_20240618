@@ -5,7 +5,10 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: rem(9.3);
+    gap: rem(3.2);
+    @include mq(md){
+        gap: rem(9.3);
+    }
 }
 
 .images__section-container {
@@ -13,8 +16,11 @@
 }
 
 .images__section-container img {
-    aspect-ratio: 446/319;
+    aspect-ratio: 122/143;
     width: 100%;
     height: 100%;
     object-fit: cover;
+    @include mq(md){
+        aspect-ratio: 446/319;
+    }
 }
