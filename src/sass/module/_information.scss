@@ -1,8 +1,13 @@
 @use "global" as *;
 
 .information__inner{
-    max-width: rem(790);
+    max-width: $max-width;
     margin: auto;
+    padding: 0 rem(20);
+    @include mq(md){
+        max-width: rem(790);
+        padding: 0;
+    }
 }
 
 /* Header */
@@ -32,6 +37,17 @@
     background: rgba(0, 0, 0, 0.5); /* 黒のオーバーレイ */
 }
 
+@media screen and (max-width: 767px) {
+    .information__bg {
+        background-image: url(../images/common/information-sp.png);
+        background-size: cover;
+        background-position: center;
+        object-fit: cover;
+        width: 100%;
+        height: rem(272); /* 高さ指定 */
+    }
+}
+
 .information__content {
     position: relative;
     z-index: 1;
@@ -39,21 +55,34 @@
 }
 
 .information__title {
-    font-size: rem(36);
+    font-size: rem(18);
     letter-spacing: -0.05em;
+    font-weight: $normal;
+    @include mq(md){
+        font-size: rem(36);
+    }
 }
 
 .information__subtitle {
     text-align: left;
-    margin-top: rem(26.5);
-    font-size: rem(16);
+    margin-top: rem(11.2);
+    padding: 0 rem(33.3);
+    font-size: rem(12);
     line-height: 1.75;
     letter-spacing: 0.1em;
+    @include mq(md){
+        margin-top: rem(26.5);
+        padding: 0;
+    }
 }
 
 .information__action {
-    margin-top: rem(26);
-    font-size: rem(16);
+    margin-top: rem(16);
+    font-size: rem(12);
+    @include mq(md){
+        margin-top: rem(26);
+        font-size: rem(16);
+    }
 }
 
 
@@ -65,14 +94,27 @@
     color: $white;
     font-size: rem(16);
     background: #EF2622;
-    width: rem(360);
-    padding: rem(18) 0;
+    width: rem(310);
+    padding: rem(10.5) 0;
     position: relative;
     z-index: 1;
     border: none;
     text-decoration: none;
     transition: background-color 0.3s ease;
-
+    @include mq(md){
+        margin-top: rem(10.6);
+        display: inline-block;
+        color: $white;
+        font-size: rem(16);
+        background: #EF2622;
+        width: rem(360);
+        padding: rem(18) 0;
+        position: relative;
+        z-index: 1;
+        border: none;
+        text-decoration: none;
+        transition: background-color 0.3s ease;    
+    }
 }
 
 .information__button::before {

@@ -13,14 +13,12 @@
 }
 
 .comment__img{
-    width: 100%;
+    width: rem(200);
+    margin: auto;
     @include mq(md){
         width: 29.2%;
     }
 }
-
-
-
 
 .comment__content{
     width: 100%;
@@ -31,7 +29,12 @@
 
 .comment__textbox{
     background-color: $white;
+    margin-top: rem(15);
     padding: rem(30) rem(21) rem(70) rem(30);
+    @include mq(md){
+        margin-top: rem(0);
+        padding: rem(30) rem(21) rem(70) rem(30);
+    }
 }
 
 .comment__title{
