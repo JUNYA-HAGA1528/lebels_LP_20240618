@@ -1,0 +1,19 @@
+@use "global" as *;
+
+/* フローティングボタン */
+.floating-button {
+    position: fixed;
+    bottom: rem(22); /* ボタンの下からの距離 */
+    right: rem(22); /* ボタンの右からの距離 */
+    z-index: 1000; /* ボタンが他の要素の上に表示されるようにする */
+}
+
+.floating-button a img {
+    width: rem(219); /* ボタンの幅 */
+    height: rem(234); /* ボタンの高さ */
+    transition: transform 0.3s;
+}
+
+.floating-button a img:hover {
+    transform: scale(1.1); /* ボタンをホバーしたときに拡大する */
+}
