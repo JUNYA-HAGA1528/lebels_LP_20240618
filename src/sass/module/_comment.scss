@@ -51,9 +51,12 @@
     color: #EF7740;
     font-size: rem(18);
     @include mq(md){
-        color: $blue;
         font-size: rem(28);
     }
+}
+
+.comment__title--blue{
+    color: $blue;
 }
 
 .comment__text{
@@ -61,6 +64,7 @@
     font-size: rem(14);
     letter-spacing: 0.05em;
     line-height: 1.75;
+    text-align: justify;
     @include mq(md){
         margin-top: rem(28);
         font-size: rem(16);

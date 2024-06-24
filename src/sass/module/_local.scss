@@ -38,11 +38,10 @@
     font-size: rem(18);
     margin: rem(31.2) auto auto auto;
     text-align: center;
-    font-weight: $bold;
+    font-weight: 800;
     @include mq(md){
         font-size: rem(30);
         width: rem(360);
-        font-weight: $normal;
     }
 }
 

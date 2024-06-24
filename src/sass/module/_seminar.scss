@@ -11,7 +11,7 @@
 
 .seminar__title{
     color: $blue;
-    font-size: rem(18);
+    font-size: rem(21);
     @include mq(md){
         font-size: rem(36);
     }
@@ -20,10 +20,10 @@
 .seminar__subtitle{
     margin-top: rem(18);
     line-height: 1.75;
-    font-size: rem(15);
+    font-size: rem(16);
+    text-align: justify;
     @include mq(md){
         margin-top: rem(27.2);
-        font-size: rem(16);
     }
 }
 
@@ -95,7 +95,7 @@
     position: relative;
     color: $blue;
     font-weight: $bold;
-    font-size: rem(16);
+    font-size: rem(18);
     @include mq(md){
         font-size: rem(20);
     }
@@ -114,9 +114,10 @@
 
 .seminar__dd{
     margin-top: rem(6);
-    font-size: rem(12);
+    font-size: rem(16);
     letter-spacing: 0.05em;
     font-weight: 500;
+    text-align: justify;
     @include mq(md){
         margin-top: rem(16);
         font-size: rem(16);
