@@ -27,24 +27,32 @@
     text-align: center;
     margin-top: rem(-150);
 }
+
 @media screen and (max-width: 1150px) {
     .future__button {
         margin-top: rem(-100);
     }
 }
+@media screen and (max-width: 768px) {
+    .future__button {
+        margin-top: rem(10);
+    }
+}
 
 .future__info {
     color: $white;
-    font-size: rem(28);
+    font-size: rem(16);
     font-weight: bold;
     background: #EF2622;
-    width: rem(310);
+    width: 100%;
     padding: rem(18) 0;
     border-radius: rem(50);
     position: relative;
     z-index: 1;
     transition: .3s;
+    letter-spacing: -0.03em;
     @include mq(md){
+        font-size: rem(28);
         width: rem(600);
         padding: rem(30.6) 0;
     }
@@ -83,7 +91,10 @@
 
 .future__info span {
     position: relative; /* 追加 */
-    top: -10px; /* 上方向に移動 */
+    top: rem(-5); /* 上方向に移動 */
+    @include mq(md){
+        top: rem(-10); /* 上方向に移動 */
+    }
 }
 
 .future__info span::after {
@@ -93,12 +104,15 @@
     background-size: contain;
     content: "";
     position: absolute;
-    bottom: -80%;
+    bottom: -100%;
     right: 47%;
     width: rem(19);
     height: rem(14);
     transform: translateY(-50%);
     transition: 0.2s background-color;
+    @include mq(md){
+        bottom: -80%;
+    }
 }
 
 .future__info:hover span::after {

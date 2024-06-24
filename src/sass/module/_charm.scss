@@ -15,6 +15,16 @@
         margin-top: rem(-64);
     }
 }
+@media screen and (min-width:1700px) {
+    .charm__container {
+        margin-top: rem(-130);
+    }
+}
+@media screen and (min-width:1920px) {
+    .charm__container {
+        margin-top: rem(-160);
+    }
+}
 
 .charm__life {
     margin-top: 40px; /* rem(40) の代わりに 40px を使用 */

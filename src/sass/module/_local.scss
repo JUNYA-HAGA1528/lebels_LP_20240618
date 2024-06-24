@@ -11,27 +11,12 @@
 }
 
 .local__container{
-    margin-top: rem(-90);
+    margin-top: rem(15);
     @include mq(md){
-        margin-top: rem(0);
+        margin-top: rem(30);
     }
 }
 
-@media screen and (max-width:600px) {
-    .local__container {
-        margin-top: rem(-60);
-    }
-}
-@media screen and (max-width:500px) {
-    .local__container {
-        margin-top: rem(-45);
-    }
-}
-@media screen and (max-width:400px) {
-    .local__container {
-        margin-top: rem(-30);
-    }
-}
 
 .local__life {
     margin-top: 40px; /* rem(40) の代わりに 40px を使用 */
