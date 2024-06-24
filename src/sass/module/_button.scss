@@ -1,19 +1,19 @@
 @use "global" as *;
 
 .button {
+    background: #EF2622;
+    border: solid 1px #EF2622 ;
+    position: relative;
     color: $white;
-    font-size: 16px;
+    font-size: rem(16);
     font-weight: bold;
     width: rem(310);
     padding: rem(10.5) 0;
-    background: #EF2622;
-    border: solid 1px #EF2622 ;
-    border: 1px solid $white;
-    position: relative;
     border-radius: rem(50);
     z-index: 1;
-    transition: .3s;
-  }
+    transition: .7s;
+    overflow: hidden;
+}
 
 .button::before {
     border-radius: rem(50);
@@ -32,10 +32,14 @@
 
 .button::after{
     border-radius: rem(0);
+    transition: all 0.4s ease-in-out;
 }
 
-.button:hover {
+.button:hover span {
     color: #EF2622;
+}   
+
+.button:hover {
     border: solid 1px #EF2622 ;
 }
 
@@ -44,7 +48,6 @@
     transform: scale(1, 1);
 }
 
-
 .button a {
     text-decoration: none;
     color: inherit;
@@ -52,12 +55,7 @@
     width: 100%;
     height: 100%;
 }
-
-
-
-
-
-
+   
 .button span::after {
 	background-image: url(../images/common/arrow-right.png);
 	background-position: center;
@@ -66,7 +64,7 @@
 	content: "";
     position: absolute;
     top: 50%;
-    right: rem(50);
+    right: rem(32);
     width: rem(19);
 	height: rem(14);
 	transform: translateY(-50%);

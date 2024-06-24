@@ -47,18 +47,19 @@
 
 
 .future__info {
-    color: $white;
-    font-size: 16px;
-    font-weight: bold;
-    width: 100%;
-    padding: rem(18) 0;
     background: #EF2622;
     border: solid 1px #EF2622 ;
-    border: 1px solid $white;
     position: relative;
+    color: $white;
+    font-size: rem(16);
+    font-weight: bold;
+    width: 100%;
+    padding: rem(12) 0;
     border-radius: rem(50);
     z-index: 1;
-    transition: .3s;
+    transition: .7s;
+    overflow: hidden;
+   
     @include mq(md){
         font-size: rem(28);
         width: rem(600);
