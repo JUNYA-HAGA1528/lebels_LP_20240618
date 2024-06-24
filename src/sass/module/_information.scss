@@ -92,58 +92,45 @@
 
 
 .information__button {
-    margin-top: rem(10.6);
-    display: inline-block;
     color: $white;
-    font-size: rem(16);
-    background: #EF2622;
+    font-size: 16px;
+    font-weight: bold;
     width: rem(310);
     padding: rem(10.5) 0;
+    border: 1px solid $white;
     position: relative;
     z-index: 1;
-    border: none;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-    @include mq(md){
-        margin-top: rem(10.6);
-        display: inline-block;
-        color: $white;
-        font-size: rem(16);
-        background: #EF2622;
-        width: rem(360);
-        padding: rem(18) 0;
-        position: relative;
-        z-index: 1;
-        border: none;
-        text-decoration: none;
-        transition: background-color 0.3s ease;    
-    }
-}
+    transition: .3s;
+  }
 
 .information__button::before {
     content: "";
-    width: rem(310);
+    width: 100%;
     height: 100%;
     position: absolute;
     top: 0;
     left: 0;
     z-index: -1;
     background: $white;
+   
+    transform-origin: 100% 50%;
     transform: scaleX(0);
     transition: transform ease .3s;
-    border: solid 1px #333 ;
-    @include mq(md){
-        width: rem(360);
-    }
+}
+
+.information__button::after{
+    border-radius: rem(0);
 }
 
 .information__button:hover {
-    color: #333;
+    color: $black;
 }
 
 .information__button:hover::before {
-    transform: scaleX(1);
+    transform-origin: 0% 50%;
+    transform: scale(1, 1);
 }
+
 
 .information__button a {
     text-decoration: none;
@@ -152,6 +139,11 @@
     width: 100%;
     height: 100%;
 }
+
+
+
+
+
 
 .information__button span::after {
 	background-image: url(../images/common/arrow-right.png);
@@ -169,7 +161,5 @@
 }
 
 .information__button:hover span::after {
-    @include mq(md){
-        background-image: url(../images/common/arrow-right-black.png);
-    }
+    background-image: url(../images/common/arrow-right-black.png);
 }

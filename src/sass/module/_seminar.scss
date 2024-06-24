@@ -114,13 +114,12 @@
 
 .seminar__dd{
     margin-top: rem(6);
-    font-size: rem(16);
+    font-size: rem(14);
     letter-spacing: 0.05em;
     font-weight: 500;
     text-align: justify;
     @include mq(md){
         margin-top: rem(16);
-        font-size: rem(16);
     }
 }
 
