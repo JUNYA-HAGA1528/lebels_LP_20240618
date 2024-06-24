@@ -48,7 +48,7 @@
 }
 
 .comment__title{
-    color: #EF7740;
+    color: $blue;
     font-size: rem(18);
     @include mq(md){
         font-size: rem(28);

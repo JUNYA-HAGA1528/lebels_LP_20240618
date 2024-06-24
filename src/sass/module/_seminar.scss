@@ -23,6 +23,7 @@
     font-size: rem(15);
     @include mq(md){
         margin-top: rem(27.2);
+        font-size: rem(16);
     }
 }
 
@@ -58,7 +59,8 @@
 .seminar__pdf{
     margin-top: rem(11.3);
     color: #707070;
-    font-size: rem(12);
+    font-size: rem(14);
+    font-weight: $bold;
     letter-spacing: 0.05em;
 }
 
@@ -93,6 +95,10 @@
     position: relative;
     color: $blue;
     font-weight: $bold;
+    font-size: rem(16);
+    @include mq(md){
+        font-size: rem(20);
+    }
 }
 
 .seminar__dt::before {

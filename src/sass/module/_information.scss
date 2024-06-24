@@ -60,6 +60,7 @@
     font-weight: $normal;
     @include mq(md){
         font-size: rem(36);
+        font-weight: 900;
     }
 }
 
@@ -72,6 +73,7 @@
     letter-spacing: 0.1em;
     @include mq(md){
         margin-top: rem(26.5);
+        font-size: rem(16);
         padding: 0;
     }
 }
