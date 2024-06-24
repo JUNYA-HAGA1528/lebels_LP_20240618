@@ -116,6 +116,7 @@
     margin-top: rem(6);
     font-size: rem(12);
     letter-spacing: 0.05em;
+    font-weight: 500;
     @include mq(md){
         margin-top: rem(16);
         font-size: rem(16);
